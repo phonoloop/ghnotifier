@@ -43,7 +43,7 @@ docker compose down
 - **Test Personal Access Token**
   
   ```sh
-  curl -H "Authorization: token <GITHUB_PAT>" https://api.github.com/orgs/skyscrapers/repos
+  curl -H "Authorization: token <GITHUB_PAT>" https://api.github.com/orgs/<GITHUB-ORGANIZATION-NAME>/repos
   ```
 
 - **Get Your User Info**
@@ -56,7 +56,7 @@ docker compose down
   
   ```sh
   curl -H "Authorization: token <GITHUB_PAT>" \
-  "https://api.github.com/search/issues?q=%22<YOUR-GH-HANDLE>%22+in%3Acomments+org%3Askyscrapers+is%3Aissue+updated%3A%3E2025-05-14T17%3A50%3A00Z&sort=updated&order=desc"
+  "https://api.github.com/search/issues?q=%22<YOUR-GH-HANDLE>%22+in%3Acomments+org%3A<GITHUB-ORGANIZATION-NAME>+is%3Aissue+updated%3A%3E2025-05-14T17%3A50%3A00Z&sort=updated&order=desc"
   ```
 
 ### Slack
