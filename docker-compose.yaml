@@ -11,8 +11,8 @@ services:
     #   - GITHUB_TOKEN=ghp_xxx               # replace with your GitHub token
     #   - SLACK_BOT_TOKEN=xoxb-xxx           # replace with your Slack bot token
     #   - SLACK_USER_ID=U12345678            # replace with your Slack user ID
-    #   - ORG_NAME=skyscrapers
-    #   - HANDLE=phonoloop
+    #   - ORG_NAME=                          # replace with your GitHub organization name
+    #   - HANDLE=                            # replace with your GitHub handle
     #   - INTERVAL_MINUTES=60
     volumes:
       - ./:/app                        # to persist last_checked.txt
