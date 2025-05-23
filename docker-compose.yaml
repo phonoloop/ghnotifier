@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  ghnotifier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ghnotifier_container
+    restart: unless-stopped
+    # environment:
+    #   - GITHUB_TOKEN=ghp_xxx               # replace with your GitHub token
+    #   - SLACK_BOT_TOKEN=xoxb-xxx           # replace with your Slack bot token
+    #   - SLACK_USER_ID=U12345678            # replace with your Slack user ID
+    #   - ORG_NAME=skyscrapers
+    #   - HANDLE=phonoloop
+    #   - INTERVAL_MINUTES=60
+    volumes:
+      - ./:/app                        # to persist last_checked.txt
+    command: ["sh", "-c", "while true; do python3 script.py; sleep 3600; done"]
